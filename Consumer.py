@@ -7,7 +7,7 @@ import decimal
 # Kinesis setup
 kinesis = boto3.client("kinesis", region_name="us-east-1")
 shard_id = "shardId-000000000000"
-pre_shard_it = kinesis.get_shard_iterator(
+pre_shard_it = kinesis.get_shard_itrator(
     StreamName='CadabraOrders',
     ShardId=shard_id,
     ShardIteratorType='LATEST'
